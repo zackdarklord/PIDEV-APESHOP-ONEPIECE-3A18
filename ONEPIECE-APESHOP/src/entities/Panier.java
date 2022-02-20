@@ -9,6 +9,7 @@ package entities;
  * @author zakar
  */
 public class Panier {
+
     private int numeroPanier;
     private int numeroProduit;
     private int quantite;
@@ -19,6 +20,13 @@ public class Panier {
 
     public Panier(int numeroPanier, int numeroProduit, int quantite, String dateAjout) {
         this.numeroPanier = numeroPanier;
+        this.numeroProduit = numeroProduit;
+        this.quantite = quantite;
+        this.dateAjout = dateAjout;
+    }
+
+    public Panier(int numeroProduit, int quantite, String dateAjout) {
+
         this.numeroProduit = numeroProduit;
         this.quantite = quantite;
         this.dateAjout = dateAjout;
@@ -60,7 +68,5 @@ public class Panier {
     public String toString() {
         return "Panier{" + "numeroPanier=" + numeroPanier + ", numeroProduit=" + numeroProduit + ", quantite=" + quantite + ", dateAjout=" + dateAjout + '}';
     }
-    
-    
-    
+
 }

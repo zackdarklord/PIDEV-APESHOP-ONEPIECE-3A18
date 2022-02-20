@@ -9,6 +9,7 @@ package entities;
  * @author zakar
  */
 public class Utilisateur {
+
     private int numeroUtilisateur;
     private String email;
     private String motDePasse;
@@ -38,8 +39,8 @@ public class Utilisateur {
     }
 
     //simple user
-    public Utilisateur(int numeroUtilisateur, String email, String motDePasse, String dateInscription) {
-        this.numeroUtilisateur = numeroUtilisateur;
+    public Utilisateur(String email, String motDePasse, String dateInscription) {
+
         this.email = email;
         this.motDePasse = motDePasse;
         this.dateInscription = dateInscription;
@@ -48,8 +49,8 @@ public class Utilisateur {
     }
 
     //admin
-    public Utilisateur(int numeroUtilisateur, String email, String motDePasse, String dateInscription, String nomAdmin) {
-        this.numeroUtilisateur = numeroUtilisateur;
+    public Utilisateur(String email, String motDePasse, String dateInscription, String nomAdmin) {
+
         this.email = email;
         this.motDePasse = motDePasse;
         this.dateInscription = dateInscription;
@@ -59,8 +60,8 @@ public class Utilisateur {
     }
     //client
 
-    public Utilisateur(int numeroUtilisateur, String email, String motDePasse, String dateInscription, String nomClient, String adresse, String infoCarteBancaire, int numTel) {
-        this.numeroUtilisateur = numeroUtilisateur;
+    public Utilisateur(String email, String motDePasse, String dateInscription, String nomClient, String adresse, String infoCarteBancaire, int numTel) {
+
         this.email = email;
         this.motDePasse = motDePasse;
         this.dateInscription = dateInscription;
@@ -159,15 +160,4 @@ public class Utilisateur {
         return "Utilisateur{" + "numeroUtilisateur=" + numeroUtilisateur + ", email=" + email + ", motDePasse=" + motDePasse + ", dateInscription=" + dateInscription + ", role=" + role + ", nomClient=" + nomClient + ", nomAdmin=" + nomAdmin + ", adresse=" + adresse + ", infoCarteBancaire=" + infoCarteBancaire + ", numTel=" + numTel + '}';
     }
 
-    public String toStringU() {
-        return "Utilisateur{" + "numeroUtilisateur=" + numeroUtilisateur + ", email=" + email + ", motDePasse=" + motDePasse + ", dateInscription=" + dateInscription + ", role=" + role + '}';
-    }
-
-    public String toStringA() {
-        return "Utilisateur{" + "numeroUtilisateur=" + numeroUtilisateur + ", email=" + email + ", motDePasse=" + motDePasse + ", dateInscription=" + dateInscription + ", role=" + role + ", nomAdmin=" + nomAdmin + '}';
-    }
-
-    public String toStringC() {
-        return "Utilisateur{" + "numeroUtilisateur=" + numeroUtilisateur + ", email=" + email + ", motDePasse=" + motDePasse + ", dateInscription=" + dateInscription + ", role=" + role + ", nomClient=" + nomClient + ", adresse=" + adresse + ", infoCarteBancaire=" + infoCarteBancaire + ", numTel=" + numTel + '}';
-    }
 }
