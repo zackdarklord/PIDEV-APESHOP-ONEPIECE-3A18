@@ -4,6 +4,8 @@
  */
 package entities;
 
+import java.sql.Date;
+
 /**
  *
  * @author zakar
@@ -13,7 +15,7 @@ public class Utilisateur {
     private int numeroUtilisateur;
     private String email;
     private String motDePasse;
-    private String dateInscription;
+    private Date dateInscription;
     private String role;
     private String nomClient;
     private String nomAdmin;
@@ -25,7 +27,7 @@ public class Utilisateur {
     public Utilisateur() {
     }
 
-    public Utilisateur(int numeroUtilisateur, String email, String motDePasse, String dateInscription, String role, String nomClient, String nomAdmin, String adresse, String infoCarteBancaire, int numTel) {
+    public Utilisateur(int numeroUtilisateur, String email, String motDePasse, Date dateInscription, String role, String nomClient, String nomAdmin, String adresse, String infoCarteBancaire, int numTel) {
         this.numeroUtilisateur = numeroUtilisateur;
         this.email = email;
         this.motDePasse = motDePasse;
@@ -39,7 +41,7 @@ public class Utilisateur {
     }
 
     //simple user
-    public Utilisateur(String email, String motDePasse, String dateInscription) {
+    public Utilisateur(String email, String motDePasse, Date dateInscription) {
 
         this.email = email;
         this.motDePasse = motDePasse;
@@ -49,7 +51,7 @@ public class Utilisateur {
     }
 
     //admin
-    public Utilisateur(String email, String motDePasse, String dateInscription, String nomAdmin) {
+    public Utilisateur(String email, String motDePasse, Date dateInscription, String nomAdmin) {
 
         this.email = email;
         this.motDePasse = motDePasse;
@@ -60,7 +62,7 @@ public class Utilisateur {
     }
     //client
 
-    public Utilisateur(String email, String motDePasse, String dateInscription, String nomClient, String adresse, String infoCarteBancaire, int numTel) {
+    public Utilisateur(String email, String motDePasse, Date dateInscription, String nomClient, String adresse, String infoCarteBancaire, int numTel) {
 
         this.email = email;
         this.motDePasse = motDePasse;
@@ -81,7 +83,7 @@ public class Utilisateur {
         return adresse;
     }
 
-    public String getDateInscription() {
+    public Date getDateInscription() {
         return dateInscription;
     }
 
@@ -118,7 +120,7 @@ public class Utilisateur {
         this.adresse = adresse;
     }
 
-    public void setDateInscription(String dateInscription) {
+    public void setDateInscription(Date dateInscription) {
         this.dateInscription = dateInscription;
     }
 

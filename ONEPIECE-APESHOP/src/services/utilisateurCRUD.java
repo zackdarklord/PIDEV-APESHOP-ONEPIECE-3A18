@@ -4,7 +4,6 @@
  */
 package services;
 
-import entities.Panier;
 import entities.Utilisateur;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -35,7 +34,7 @@ public class utilisateurCRUD {
 
             pst.setString(1, u.getEmail());
             pst.setString(2, u.getMotDePasse());
-            pst.setString(3, u.getDateInscription());
+            pst.setDate(3, u.getDateInscription());
             pst.setString(4, u.getRole());
             pst.setString(5, u.getNomClient());
             pst.setString(6, u.getNomAdmin());
@@ -57,7 +56,7 @@ public class utilisateurCRUD {
             PreparedStatement pst = cnx.prepareStatement(req);
             pst.setString(1, u.getEmail());
             pst.setString(2, u.getMotDePasse());
-            pst.setString(3, u.getDateInscription());
+            pst.setDate(3, u.getDateInscription());
             pst.setString(4, u.getRole());
             pst.setString(5, u.getNomClient());
             pst.setString(6, u.getNomAdmin());
@@ -97,7 +96,7 @@ public class utilisateurCRUD {
                 p.setNumeroUtilisateur(rs.getInt(1));
                 p.setEmail(rs.getString(2));
                 p.setMotDePasse(rs.getString(3));
-                p.setDateInscription(rs.getString(4));
+                p.setDateInscription(rs.getDate(4));
                 p.setRole(rs.getString(5));
                 p.setNomClient(rs.getString(6));
                 p.setNomAdmin(rs.getString(7));

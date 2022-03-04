@@ -6,6 +6,7 @@ package test;
 
 import entities.Panier;
 import entities.Utilisateur;
+import java.sql.Date;
 import services.panierCRUD;
 import services.utilisateurCRUD;
 import utils.MyConnection;
@@ -19,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         //TEST PANIER
         // MyConnection mc=new MyConnection();
-        //Panier p = new Panier (1,3,"1-1-2022");
+       // Panier p = new Panier (1,3,new Date(System.currentTimeMillis()));
         //Panier p1 = new Panier (1,3,"1-1-2022");
         //panierCRUD prd =new panierCRUD();
         //prd.ajouterPanier(p);
@@ -31,11 +32,11 @@ public class Main {
         // Utilisateur u= new Utilisateur("zak@gmail.com","kamekaze","1-1-1994");
         //Utilisateur u1= new Utilisateur("zak@gmail.com","kamekaze","1-1-1994","Adminzack");
         // Utilisateur u1= new Utilisateur("zak@gmail.com","kamekaze","1-1-1994","zakaria", "laouina", "155448815", 20164182);
-        //utilisateurCRUD urd =new utilisateurCRUD ();
+        utilisateurCRUD urd =new utilisateurCRUD ();
         //urd.ajouterUser(u1);
         // urd.modifierUser(u1, 1);
         //urd.supprimerUser(1);
 
-        //System.out.println(urd.afficherUser());
+        System.out.println(urd.afficherUser());
     }
 }

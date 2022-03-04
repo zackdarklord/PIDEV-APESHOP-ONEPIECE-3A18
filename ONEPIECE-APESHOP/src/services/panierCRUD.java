@@ -33,7 +33,7 @@ public class panierCRUD {
             PreparedStatement pst = cnx.prepareStatement(req);
             pst.setInt(1, p.getNumeroProduit());
             pst.setInt(2, p.getQuantite());
-            pst.setString(3, p.getDateAjout());
+            pst.setDate(3, p.getDateAjout());
 
             pst.executeUpdate();
             System.out.println("panier ajoute !");
@@ -49,7 +49,7 @@ public class panierCRUD {
             PreparedStatement pst = cnx.prepareStatement(req);
             pst.setInt(1, p.getNumeroProduit());
             pst.setInt(2, p.getQuantite());
-            pst.setString(3, p.getDateAjout());
+            pst.setDate(3, p.getDateAjout());
             pst.setInt(4, id);
             pst.executeUpdate();
             System.out.println("panier modifie !");
@@ -83,7 +83,7 @@ public class panierCRUD {
                 p.setNumeroPanier(rs.getInt(1));
                 p.setNumeroProduit(rs.getInt(2));
                 p.setQuantite(rs.getInt(3));
-                p.setDateAjout(rs.getString(4));
+                p.setDateAjout(rs.getDate(4));
 
                 MyList.add(p);
             }

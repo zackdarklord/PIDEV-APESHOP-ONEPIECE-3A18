@@ -4,6 +4,8 @@
  */
 package entities;
 
+import java.sql.Date;
+
 /**
  *
  * @author zakar
@@ -13,26 +15,26 @@ public class Panier {
     private int numeroPanier;
     private int numeroProduit;
     private int quantite;
-    private String dateAjout;
+    private Date dateAjout;
 
     public Panier() {
     }
 
-    public Panier(int numeroPanier, int numeroProduit, int quantite, String dateAjout) {
+    public Panier(int numeroPanier, int numeroProduit, int quantite, Date dateAjout) {
         this.numeroPanier = numeroPanier;
         this.numeroProduit = numeroProduit;
         this.quantite = quantite;
         this.dateAjout = dateAjout;
     }
 
-    public Panier(int numeroProduit, int quantite, String dateAjout) {
+    public Panier(int numeroProduit, int quantite, Date dateAjout) {
 
         this.numeroProduit = numeroProduit;
         this.quantite = quantite;
         this.dateAjout = dateAjout;
     }
 
-    public String getDateAjout() {
+    public Date getDateAjout() {
         return dateAjout;
     }
 
@@ -48,7 +50,7 @@ public class Panier {
         return quantite;
     }
 
-    public void setDateAjout(String dateAjout) {
+    public void setDateAjout(Date dateAjout) {
         this.dateAjout = dateAjout;
     }
 
