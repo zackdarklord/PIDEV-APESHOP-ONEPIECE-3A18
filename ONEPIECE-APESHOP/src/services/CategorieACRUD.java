@@ -42,9 +42,9 @@ public class CategorieACRUD {
         }
     }
     
-    public void ajouterAvis2 (CategorieA c ){
+    public void ajouterCategorieA2 (CategorieA c ){
         try {
-            String requete2 = "INSERT INTO categorie (nomCategorie) "
+            String requete2 = "INSERT INTO categoriea (nomCategorie) "
                     + "VALUES (?)";
             PreparedStatement pst = cnx2.prepareStatement(requete2);
             pst.setString(1,c.getNomCategorie());
@@ -57,10 +57,10 @@ public class CategorieACRUD {
         }
     }
     
-    public List<CategorieA> affCategorieAs (){
+    public List<CategorieA> afficherCategorieA (){
                     List<CategorieA> myList = new ArrayList<>();
         try {
-            String requete3 = " SELECT * FROM categorieA ";
+            String requete3 = " SELECT * FROM categoriea ";
             Statement st = cnx2.createStatement();
             ResultSet rs= st.executeQuery(requete3);  
             while (rs.next()){
@@ -78,11 +78,11 @@ public class CategorieACRUD {
     
      public void modifierCategorieA (CategorieA c , int idCategorie){
     try {
-            String req = "UPDATE commandes SET nomCategorie=?"
+            String req = "UPDATE categoriea SET nomCategorie=?"
                     + "WHERE idCategorie=?";
             PreparedStatement pst = cnx2.prepareStatement(req);
             pst.setString(1,c.getNomCategorie()); 
-             pst.setInt(2,c.getIdCategorie()) ;
+            pst.setInt(2,idCategorie) ;
             pst.executeUpdate();
             System.out.println("Categorie modifie !");
         } catch (SQLException ex) {
@@ -92,7 +92,7 @@ public class CategorieACRUD {
   
    public void supprimerCategorieA(int idCategorie){
     try {
-            String req = "DELETE FROM categorieA "
+            String req = "DELETE FROM categoriea "
                     + "WHERE idCategorie=?";
             PreparedStatement pst = cnx2.prepareStatement(req);
             pst.setInt(1, idCategorie);
@@ -102,4 +102,23 @@ public class CategorieACRUD {
             System.err.println(ex.getMessage());
         }
     }
+   public List<String> afficherCategorieANom (){
+                    List<String> myList = new ArrayList<>();
+        try {
+            String requete3 = " SELECT nomCategorie FROM categoriea ";
+            Statement st = cnx2.createStatement();
+            ResultSet rs= st.executeQuery(requete3);  
+            while (rs.next()){
+            String x ;
+           
+            x=rs.getString(1);
+            myList.add(x);
+            }
+            
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return myList ;
+    }
+   
 }

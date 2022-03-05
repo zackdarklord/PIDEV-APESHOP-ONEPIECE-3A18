@@ -3,7 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/test/Main.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/AjoutAvis.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/fxml.css</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/entities/Avis.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/AjoutAvisController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/entities/CategorieA.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ListCategorie.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ListAvis.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ModifCategorie.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/services/AvisCRUD.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/test/MainCategorie.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/services/CategorieACRUD.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/AjoutCategorieController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/utils/MyConnection.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ModifAvis.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ModifCategorieController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ModifAvisController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ListAvisController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/AjoutCategorie.fxml</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/gui/ListCategorieController.java</file>
+            <file>file:/C:/Users/Asus/Desktop/Nouveau%20dossier/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/test/MainAvis.java</file>
         </group>
     </open-files>
 </project-private>

@@ -83,13 +83,15 @@ public class AvisCRUD {
     
      public void modifierAvis (Avis a , int idAvis){
     try {
-            String req = "UPDATE commandes SET contenuAvis=?,nomCategorie=?,numeroUtilisateur=? "
+            String req = "UPDATE avis SET contenuAvis=?,nomCategorie=?,numeroUtilisateur=? "
                     + "WHERE idAvis=?";
             PreparedStatement pst = cnx2.prepareStatement(req);
-             pst.setString(1,a.getContenuAvis());
+             
+            pst.setString(1,a.getContenuAvis());
             pst.setString(2,a.getNomCategorie());
             pst.setInt (3,a.getNumeroUtilisateur()); 
-             pst.setInt(4,a.getIdAvis()) ;
+            pst.setInt(4,idAvis) ;
+            
             pst.executeUpdate();
             System.out.println("Avis modifie !");
         } catch (SQLException ex) {
@@ -97,7 +99,7 @@ public class AvisCRUD {
         }
     }
   
-   public void supprimerCommande(int idAvis){
+   public void supprimerAvis(int idAvis){
     try {
             String req = "DELETE FROM avis "
                     + "WHERE idAvis=?";
@@ -109,4 +111,8 @@ public class AvisCRUD {
             System.err.println(ex.getMessage());
         }
     }
+
+    
+   
+  
 }

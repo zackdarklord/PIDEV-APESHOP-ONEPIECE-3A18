@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author zakar
  */
 public class MyConnection {
-      public String url="jdbc:mysql://localhost:3306/apeshop";
+    public String url="jdbc:mysql://localhost:3306/apeshop";
     public String login="root";
     public String pwd="";
     Connection cnx;
