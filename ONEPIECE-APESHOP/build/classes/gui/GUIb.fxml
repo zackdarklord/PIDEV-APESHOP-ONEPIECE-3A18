@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="343.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GUIbController">
+   <children>
+      <VBox layoutX="14.0" layoutY="18.0" prefHeight="212.0" prefWidth="127.0">
+         <children>
+            <Label prefHeight="46.0" prefWidth="119.0" text="numeroCommande" textFill="WHITE" underline="true" />
+            <Label prefHeight="33.0" prefWidth="116.0" text="dateCreation" underline="true" />
+            <Label prefHeight="44.0" prefWidth="136.0" text="dateEnvoi" underline="true" />
+            <Label prefHeight="35.0" prefWidth="136.0" text="numeroUtilisateur" underline="true" />
+            <Label prefHeight="44.0" prefWidth="87.0" text="statut" underline="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="182.0" layoutY="25.0" prefHeight="212.0" prefWidth="189.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tfnumC" />
+            <TextField fx:id="tfdc" />
+            <TextField fx:id="tfde" />
+            <TextField fx:id="tfnu" />
+            <TextField fx:id="tfstat" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvcommandes" layoutX="408.0" layoutY="25.0" onMouseClicked="#handleMouseAction" prefHeight="270.0" prefWidth="356.0">
+         <columns>
+            <TableColumn fx:id="colnumc" prefWidth="72.0" text="numeroCommande " />
+            <TableColumn fx:id="coldc" prefWidth="78.0" text="dateCreation" />
+            <TableColumn fx:id="colde" prefWidth="75.0" text="dateEnvoi" />
+            <TableColumn fx:id="colnumu" prefWidth="75.0" text="numeroUtilisateur" />
+            <TableColumn fx:id="colstat" prefWidth="75.0" text="statut" />
+         </columns>
+      </TableView>
+      <Button fx:id="btninsert" layoutX="60.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Ajouter" />
+      <Button fx:id="btnupdate" layoutX="164.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Modifier" />
+      <Button fx:id="btndelete" layoutX="265.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Supprimer" textFill="WHITE" />
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="84.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/insert.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="189.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/updated.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="383.0" layoutX="578.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Image1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="292.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/1828843.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="244.0" layoutY="341.0" prefHeight="52.0" prefWidth="285.0" text="                                APE SHOP" textAlignment="CENTER" textFill="#26bae8" />
+      <Label layoutX="303.0" layoutY="6.0" text="GESTION DES COMMANDES " />
+   </children>
+</AnchorPane>

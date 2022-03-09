@@ -4,14 +4,15 @@
  */
 package test;
 
-import utils.MyConnection;
-
 /**
  *
- * @author zakar
+ * @author ASUS
  */
-public class Main {
-    public static void main(String[] args) {
-       // MyConnection mc=new MyConnection();
-    }
+public class MainClass {
+   
+        public static void main(String args[]) {
+            System.out.println("My first program in Java, HelloWorld !!");
+
+
+}
 }

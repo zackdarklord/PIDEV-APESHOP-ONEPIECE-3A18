@@ -11,8 +11,9 @@ package entities;
 public class Facture {
       private int numeroFacture;
     private String typeLivraison;
-    private float prixLivraison;
+    private float prixLivraison;//+prix ensemble produit +livraison {0,4dt,7dt}
     private int numeroRegionDestinataire;
+    
 
     public Facture() {
     }

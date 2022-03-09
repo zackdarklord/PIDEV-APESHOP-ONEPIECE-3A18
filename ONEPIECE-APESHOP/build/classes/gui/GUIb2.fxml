@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GUIb2Controller">
+   <children>
+      <Label layoutX="313.0" layoutY="16.0" text="GESTION DES FACTURES" />
+      <VBox layoutX="24.0" layoutY="40.0" prefHeight="212.0" prefWidth="127.0">
+         <children>
+            <Label prefHeight="33.0" prefWidth="116.0" text="numeroFacture" underline="true" />
+            <Label prefHeight="44.0" prefWidth="136.0" text="typeLivraison" underline="true" />
+            <Label prefHeight="35.0" prefWidth="136.0" text="prixLivraison" underline="true" />
+            <Label prefHeight="44.0" prefWidth="113.0" text="numRegionDestin" underline="true" />
+         </children>
+      </VBox>
+      <VBox layoutX="143.0" layoutY="40.0" prefHeight="212.0" prefWidth="189.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tfnumF" />
+            <TextField fx:id="tftypL" />
+            <TextField fx:id="tfprL" />
+            <TextField fx:id="tfnumR" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvfactures" layoutX="418.0" layoutY="37.0" onMouseClicked="#handleMouseAction" prefHeight="279.0" prefWidth="349.0">
+         <columns>
+            <TableColumn fx:id="colnumF" prefWidth="72.0" text="numeroFacture" />
+            <TableColumn fx:id="coltypl" prefWidth="87.0" text="type Livraison" />
+            <TableColumn fx:id="colprl" prefWidth="97.0" text="prix Livraison " />
+            <TableColumn fx:id="colnumr" prefWidth="91.0" text="num Region " />
+         </columns>
+      </TableView>
+      <Button fx:id="btninsert2" layoutX="70.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Ajouter" />
+      <Button fx:id="btnupdate2" layoutX="174.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Modifier" />
+      <Button fx:id="btndelete2" layoutX="275.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" text="Supprimer" />
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="94.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/insert.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="199.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/updated.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="302.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/1828843.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="383.0" layoutX="568.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/Image1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="234.0" layoutY="396.0" prefHeight="52.0" prefWidth="285.0" text="                                APE SHOP" textAlignment="CENTER" textFill="#26bae8" />
+   </children>
+</AnchorPane>
