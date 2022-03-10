@@ -57,6 +57,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Button fx:id="page07" layoutX="10.0" layoutY="180.0" mnemonicParsing="false" onAction="#loadPage07View" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="consulter factures" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
             <Button fx:id="page04" mnemonicParsing="false" onAction="#loadPage04View" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="consulter forum" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="14.0" />

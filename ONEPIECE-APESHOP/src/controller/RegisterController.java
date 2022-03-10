@@ -11,6 +11,8 @@ import entities.Utilisateur;
 import helper.AlertHelper;
 import java.io.IOException;
 import java.net.URL;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,6 +31,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import services.md5tool;
 import services.utilisateurCRUD;
 
 /**
@@ -63,6 +66,7 @@ public class RegisterController implements Initializable {
 
     utilisateurCRUD urd = new utilisateurCRUD();
     List<Utilisateur> myList = urd.afficherUser();
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,16 +79,17 @@ public class RegisterController implements Initializable {
     }
 
     @FXML
-    private void register() {
+    private void register() throws Exception {
         window = registerButton.getScene().getWindow();
+         md5tool mt= new md5tool("qwrwrww More than 10", "utf-8");
         if (this.isValidated()) {
             Utilisateur u = new Utilisateur();
             u.setEmail(email.getText());
             u.setAdresse(adresse.getText());
-            u.setInfoCarteBancaire(numTel.getText());
+            u.setInfoCarteBancaire(numCarte.getText());
             u.setNumTel(Integer.parseInt(numTel.getText()));
             u.setNomClient(username.getText());
-            u.setMotDePasse(password.getText());
+            u.setMotDePasse(mt.encode(password.getText()));
             u.setDateInscription(new Date(System.currentTimeMillis()));
             u.setRole("client");
             urd.ajouterUser(u);
@@ -219,4 +224,27 @@ public class RegisterController implements Initializable {
         stage.getIcons().add(new Image("/asset/icon.png"));
         stage.show();
     }
+    public static String doHashing(String password) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+
+            messageDigest.update(password.getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder sb = new StringBuilder();
+
+            for (byte b : resultByteArray) {
+                sb.append(String.format("%02x", b));
+            }
+            System.out.println(sb.toString());
+            return sb.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
+        return "";
+    }
+    
 }

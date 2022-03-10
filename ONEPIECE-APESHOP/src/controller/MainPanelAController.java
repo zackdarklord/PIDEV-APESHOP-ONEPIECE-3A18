@@ -5,6 +5,7 @@
  */
 package controller;
 
+import entities.Utilisateur;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
@@ -45,6 +46,7 @@ public class MainPanelAController implements Initializable {
 
     @FXML
     private LineChart<?, ?> chartReceipt;
+    public Utilisateur au=new Utilisateur();
 
     /**
      * Initializes the controller class.
@@ -117,15 +119,47 @@ public class MainPanelAController implements Initializable {
     }
 
     @FXML
-    private void loadPage03View(ActionEvent e) {
-        loadFXML("Page03AView");
-        changeButtonBackground(e);
+    private void loadPage03View(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page03AView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page03AController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    //mainpanelController.u=au;
+                    //System.out.println(au);
+                    mainpanelController.afficher();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Admin Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();     
     }
 
     @FXML
-    private void loadPage04View(ActionEvent e) {
-        loadFXML("Page04AView");
-        changeButtonBackground(e);
+    private void loadPage04View(ActionEvent e) throws IOException {
+     Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page04AView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page04AController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    //System.out.println(au);
+                    mainpanelController.afficher();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Admin Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();      
     }
 
     @FXML
@@ -139,10 +173,68 @@ public class MainPanelAController implements Initializable {
         loadFXML("Page06AView");
         changeButtonBackground(e);
     }
+    @FXML
+    private void loadPage07View(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page07AView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page07AController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                   // mainpanelController.u=au;
+                    //System.out.println(au);
+                    mainpanelController.afficher();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Admin Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();    
+    }
+    @FXML
+    private void loadPage08AView(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page08AView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page08AController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                   // mainpanelController.u=au;
+                    //System.out.println(au);
+                    mainpanelController.afficher();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Admin Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();    
+    }
  @FXML
-    private void loadHomeView(ActionEvent e) {
-        loadFXML("HomeAView");
-        changeButtonBackground(e);
+    private void loadHomeView(ActionEvent e) throws IOException {
+       Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/HomeAView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    HomeAController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    //System.out.println(au);
+                    mainpanelController.test();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Admin Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();    
     }
     
 }

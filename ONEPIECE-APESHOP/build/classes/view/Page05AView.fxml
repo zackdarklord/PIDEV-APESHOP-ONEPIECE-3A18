@@ -9,12 +9,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page05AController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="21.0" prefHeight="142.0" prefWidth="493.0" text="Gestion clients" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="14.0" prefHeight="140.0" prefWidth="739.0" text="GESTION DES CLIENTS:" textFill="WHITE">
          <font>
-            <Font size="48.0" />
+            <Font size="64.0" />
          </font>
       </Label>
-      <TableView fx:id="tableview" layoutX="40.0" layoutY="146.0" prefHeight="338.0" prefWidth="1137.0" stylesheets="@tableviewchart.css">
+      <TableView fx:id="tableview" layoutX="31.0" layoutY="119.0" prefHeight="366.0" prefWidth="1078.0" stylesheets="@tableviewchart.css">
         <columns>
           <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
           <TableColumn fx:id="email" prefWidth="150.4000244140625" text="email" />
@@ -28,7 +28,7 @@
             <TableColumn fx:id="num_tel" prefWidth="157.60009765625" text="num tel" />
         </columns>
       </TableView>
-      <Button fx:id="supp_btn" layoutX="1021.0" layoutY="498.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #6622CC;" text="supprimer" textFill="WHITE">
+      <Button fx:id="supp_btn" layoutX="883.0" layoutY="498.0" mnemonicParsing="false" onAction="#delete" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: #6622CC;" text="supprimer" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

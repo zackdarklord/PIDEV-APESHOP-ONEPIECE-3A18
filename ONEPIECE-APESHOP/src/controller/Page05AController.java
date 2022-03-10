@@ -6,6 +6,8 @@
 package controller;
 
 import entities.Utilisateur;
+import helper.AlertHelper;
+import static java.awt.SystemColor.window;
 import services.utilisateurCRUD;
 import java.net.URL;
 import java.sql.Date;
@@ -15,12 +17,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Window;
 import javax.mail.FetchProfile.Item;
 
 /**
@@ -54,6 +58,7 @@ public class Page05AController implements Initializable {
     private TableColumn<Utilisateur, Integer> num_tel;
     @FXML
     private Button supp_btn;
+    Window window;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -85,5 +90,24 @@ public class Page05AController implements Initializable {
      utilisateurCRUD urd =new utilisateurCRUD();
      urd.supprimerUser(item.getNumeroUtilisateur());
     tableview.getItems().remove(selectedIndex);
+     AlertHelper.showAlert(Alert.AlertType.INFORMATION, window, "SUCESS",
+                    "user supprimé!.");
+     actualiser();
     }
+   private void actualiser()  {
+    utilisateurCRUD urd=new utilisateurCRUD();
+        List <Utilisateur> myList = urd.afficherUser();
+        ObservableList list = FXCollections.observableArrayList(myList);
+        tableview.setItems(list);
+        ID.setCellValueFactory(new PropertyValueFactory<>("numeroUtilisateur"));
+        email.setCellValueFactory(new PropertyValueFactory<>("email"));
+        password.setCellValueFactory(new PropertyValueFactory<>("motDePasse"));
+        date_insc.setCellValueFactory(new PropertyValueFactory<>("dateInscription"));
+        role.setCellValueFactory(new PropertyValueFactory<>("role"));
+        username_c.setCellValueFactory(new PropertyValueFactory<>("nomClient"));
+        username_a.setCellValueFactory(new PropertyValueFactory<>("nomAdmin"));
+        adresse.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+        carte_bancaire.setCellValueFactory(new PropertyValueFactory<>("infoCarteBancaire"));
+        num_tel.setCellValueFactory(new PropertyValueFactory<>("numTel"));
+   }
 }

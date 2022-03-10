@@ -75,6 +75,10 @@ public class Utilisateur {
     }
     // getters
 
+    public Utilisateur(Utilisateur a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getNumeroUtilisateur() {
         return numeroUtilisateur;
     }

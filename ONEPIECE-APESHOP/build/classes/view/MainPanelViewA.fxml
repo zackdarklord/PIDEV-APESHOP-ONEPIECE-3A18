@@ -57,7 +57,23 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Button fx:id="page08" layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#loadPage08AView" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text=" Commentaires" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
             <Button fx:id="page04" mnemonicParsing="false" onAction="#loadPage04View" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="gérer avis" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="page07" layoutX="10.0" layoutY="224.0" mnemonicParsing="false" onAction="#loadPage07View" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Catégorie Avis" textAlignment="JUSTIFY">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

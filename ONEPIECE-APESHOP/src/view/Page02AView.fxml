@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page02AController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page02AController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="440.0" layoutY="240.0" text="Page 02" textFill="WHITE">
+      <TableView fx:id="tableview" layoutX="31.0" layoutY="119.0" prefHeight="366.0" prefWidth="1078.0" stylesheets="@tableviewchart.css">
+         <columns>
+            <TableColumn fx:id="numC" prefWidth="163.9999656677246" text="Num Commande" />
+            <TableColumn fx:id="dateC" prefWidth="281.6000518798828" text="date creation " />
+            <TableColumn fx:id="dateE" prefWidth="176.00003051757812" text="date envoi" />
+            <TableColumn fx:id="statut" prefWidth="305.6" text="statut" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_annuler" layoutX="965.0" layoutY="496.0" mnemonicParsing="false" onAction="#annuler" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: #6622CC;" text="Annuler commande" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="36.0" text="LISTE DES COMMANDES" textFill="WHITE">
          <font>
-            <Font size="96.0" />
+            <Font size="64.0" />
          </font>
       </Label>
+      <Button fx:id="btn_annuler1" layoutX="791.0" layoutY="496.0" mnemonicParsing="false" onAction="#change" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #6622CC;" text="changer statut" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

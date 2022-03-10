@@ -31,6 +31,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import services.md5tool;
 import services.utilisateurCRUD;
 
 /**
@@ -57,12 +58,12 @@ public class ForgotViewController implements Initializable {
     }    
 
     @FXML
-    private void send(ActionEvent event) {
+    private void send(ActionEvent event) throws Exception {
         if (isValidated()){
             System.out.println("sucess");
         }
     }
-private boolean isValidated() {
+private boolean isValidated() throws Exception {
 
         window = sendButton.getScene().getWindow();
        String mail = email.getText();
@@ -88,7 +89,7 @@ private boolean isValidated() {
                 });
 
         try {
-
+            md5tool mt=new md5tool ("qwrwrww More than 10","utf-8");
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(
@@ -96,7 +97,7 @@ private boolean isValidated() {
                     InternetAddress.parse(mail)
             );
             message.setSubject("récuperation mot de passe");
-            message.setText("votre mot de passe:"+" "+u.getMotDePasse());
+            message.setText("votre mot de passe:"+" "+mt.decode(u.getMotDePasse()));
 
             Transport.send(message);
 

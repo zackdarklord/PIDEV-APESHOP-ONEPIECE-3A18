@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page04Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page04Controller">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="440.0" layoutY="240.0" text="Page 04" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="14.0" text="FORUM" textFill="WHITE">
          <font>
-            <Font size="96.0" />
+            <Font size="65.0" />
          </font>
       </Label>
+      <TableView fx:id="tableview" layoutX="31.0" layoutY="159.0" prefHeight="366.0" prefWidth="1078.0" stylesheets="@tableviewchart.css">
+         <columns>
+            <TableColumn fx:id="commentaire" prefWidth="1074.400074005127" text="                                                                                                                                                         Commentaire" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_ajouter" layoutX="813.0" layoutY="106.0" mnemonicParsing="false" onAction="#afficherS" prefHeight="35.0" prefWidth="295.0" style="-fx-background-color: #6622CC;" text="Afficher" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ChoiceBox fx:id="ch_categorie" layoutX="123.0" layoutY="107.0" prefHeight="35.0" prefWidth="684.0" />
+      <Label layoutX="32.0" layoutY="107.0" prefHeight="35.0" prefWidth="143.0" text="SUJET" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_supprimer" layoutX="964.0" layoutY="536.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="35.0" prefWidth="143.0" style="-fx-background-color: #6622CC;" text="Supprimer " textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="tf_com" layoutX="29.0" layoutY="536.0" prefHeight="26.0" prefWidth="764.0" promptText="votre commentaire ici.." />
+      <Button fx:id="btn_ajouter" layoutX="807.0" layoutY="536.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="143.0" style="-fx-background-color: #6622CC;" text="Ajouter" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

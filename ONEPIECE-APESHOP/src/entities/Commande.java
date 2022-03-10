@@ -4,21 +4,23 @@
  */
 package entities;
 
+import java.sql.Date;
+
 /**
  *
  * @author zakar
  */
 public class Commande {
       private int numeroCommande;
-    private String dateCreation;
-    private String dateEnvoi;
+    private Date dateCreation;
+    private Date dateEnvoi;
     private int numeroUtilisateur;
     private String statut;
 
     public Commande() {
     }
 
-    public Commande(int numeroCommande, String dateCreation, String dateEnvoi, int numeroUtilisateur, String statut) {
+    public Commande(int numeroCommande, Date dateCreation, Date dateEnvoi, int numeroUtilisateur, String statut) {
         this.numeroCommande = numeroCommande;
         this.dateCreation = dateCreation;
         this.dateEnvoi = dateEnvoi;
@@ -26,7 +28,7 @@ public class Commande {
         this.statut = statut;
     }
 
-    public Commande(String dateCreation, String dateEnvoi, int numeroUtilisateur, String statut) {
+    public Commande(Date dateCreation, Date dateEnvoi, int numeroUtilisateur, String statut) {
         this.dateCreation = dateCreation;
         this.dateEnvoi = dateEnvoi;
         this.numeroUtilisateur = numeroUtilisateur;
@@ -41,19 +43,19 @@ public class Commande {
         this.numeroCommande = numeroCommande;
     }
 
-    public String getDateCreation() {
+    public Date getDateCreation() {
         return dateCreation;
     }
 
-    public void setDateCreation(String dateCreation) {
+    public void setDateCreation(Date dateCreation) {
         this.dateCreation = dateCreation;
     }
 
-    public String getDateEnvoi() {
+    public Date getDateEnvoi() {
         return dateEnvoi;
     }
 
-    public void setDateEnvoi(String dateEnvoi) {
+    public void setDateEnvoi(Date dateEnvoi) {
         this.dateEnvoi = dateEnvoi;
     }
 

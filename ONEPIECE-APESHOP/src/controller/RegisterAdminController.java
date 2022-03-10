@@ -11,6 +11,9 @@ import entities.Utilisateur;
 import helper.AlertHelper;
 import java.io.IOException;
 import java.net.URL;
+import java.security.Key;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,7 +34,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import services.utilisateurCRUD;
-
+import services.md5tool;
 /**
  *
  * @author Ramesh Godara
@@ -56,6 +59,7 @@ public class RegisterAdminController implements Initializable {
 
     utilisateurCRUD urd = new utilisateurCRUD();
     List<Utilisateur> myList = urd.afficherUser();
+    
     @FXML
     private Button sendButton;
 
@@ -69,13 +73,15 @@ public class RegisterAdminController implements Initializable {
         con = dbc.getConnection();
     }
  @FXML
-    private void register() {
+    private void register() throws Exception {
+        
         window = registerButton.getScene().getWindow();
+        md5tool mt= new md5tool("qwrwrww More than 10", "utf-8");
         if (this.isValidated()) {
             Utilisateur u = new Utilisateur();
             u.setEmail(email.getText());
             u.setNomAdmin(username.getText());
-            u.setMotDePasse(password.getText());
+            u.setMotDePasse(mt.encode(password.getText()));
             u.setDateInscription(new Date(System.currentTimeMillis()));
             u.setRole("admin");
             urd.ajouterUser(u);
@@ -179,5 +185,27 @@ public class RegisterAdminController implements Initializable {
 
     @FXML
     private void send(ActionEvent event) {
+    }
+       public static String doHashing(String password) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+
+            messageDigest.update(password.getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder sb = new StringBuilder();
+
+            for (byte b : resultByteArray) {
+                sb.append(String.format("%02x", b));
+            }
+            System.out.println(sb.toString());
+            return sb.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
+        return "";
     }
 }

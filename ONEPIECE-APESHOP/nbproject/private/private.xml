@@ -4,7 +4,28 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/main/MainPanel.java</file>
-            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/helper/AlertHelper.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page02Controller.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page02AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/MD5Tool.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page04Controller.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page07Controller.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/services/md5tool.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page06AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page08AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page05Controller.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/RegisterController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/test/Main.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page05AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page01Controller.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/test/Smsapi.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/LoginController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page07AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/ForgotViewController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/RegisterAdminController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page01AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/entities/Utilisateur.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/controller/Page04AController.java</file>
+            <file>file:/C:/Users/zakar/OneDrive/Documents/PIDEV-APESHOP-ONEPIECE-3A18/ONEPIECE-APESHOP/src/services/panierCRUD.java</file>
         </group>
     </open-files>
 </project-private>

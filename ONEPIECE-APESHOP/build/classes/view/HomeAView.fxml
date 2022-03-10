@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Page01AController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeAController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="230.0" prefHeight="141.0" prefWidth="862.0" text="Welcome Home" textFill="WHITE">
+      <Label fx:id="welcome" alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="230.0" prefHeight="141.0" prefWidth="862.0" text="Welcome Home" textFill="WHITE">
          <font>
             <Font size="96.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: grey;">
+         <children>
+            <Label fx:id="welcome" layoutX="250.0" layoutY="336.0" text="welcome Home" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Candara Light" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="329.0" fitWidth="494.0" layoutX="351.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="388.3999938964844">
+               <image>
+                  <Image url="@logoApebureau1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -5,6 +5,7 @@
  */
 package controller;
 
+import entities.Utilisateur;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
@@ -45,15 +46,19 @@ public class MainPanelController implements Initializable {
 
     @FXML
     private LineChart<?, ?> chartReceipt;
-
-    /**
+private String username;
+public Utilisateur au = new Utilisateur();
+/**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+       
+        test();
     }
-
+public void test (){
+    System.out.println("main"+au);
+}
     private void changeButtonBackground(ActionEvent e) {
         Iterator<Button> iteratorMenus = menus.iterator();
 
@@ -105,33 +110,104 @@ public class MainPanelController implements Initializable {
     }
 
     @FXML
-    private void loadPage01View(ActionEvent e) {
-        loadFXML("Page01View");
-        changeButtonBackground(e);
+    private void loadPage01View(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page01View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page01Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.setU(au);
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
+
     }
 
     @FXML
-    private void loadPage02View(ActionEvent e) {
-        loadFXML("Page02View");
-        changeButtonBackground(e);
+    private void loadPage02View(ActionEvent e) throws IOException {
+       Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page02View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page02Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                   mainpanelController.afficher();
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
 
     @FXML
-    private void loadPage03View(ActionEvent e) {
-        loadFXML("Page03View");
-        changeButtonBackground(e);
+    private void loadPage03View(ActionEvent e) throws IOException {
+       Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page03View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page03Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    mainpanelController.afficher();
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
 
     @FXML
-    private void loadPage04View(ActionEvent e) {
-        loadFXML("Page04View");
-        changeButtonBackground(e);
+    private void loadPage04View(ActionEvent e) throws IOException {
+         Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page04View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page04Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.uu=au;
+                    mainpanelController.afficher();
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
 
     @FXML
-    private void loadPage05View(ActionEvent e) {
-        loadFXML("Page05View");
-        changeButtonBackground(e);
+    private void loadPage05View(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page05View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page05Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    mainpanelController.afficher();
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
 
     @FXML
@@ -141,9 +217,23 @@ public class MainPanelController implements Initializable {
     }
 
     @FXML
-    private void loadPage07View(ActionEvent e) {
-        loadFXML("Page07View");
-        changeButtonBackground(e);
+    private void loadPage07View(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/Page07View.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    Page07Controller mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    mainpanelController.afficher();
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
 
     @FXML
@@ -165,8 +255,33 @@ public class MainPanelController implements Initializable {
     }
 
     @FXML
-    private void loadHomeView(ActionEvent e) {
-        loadFXML("HomeView");
-        changeButtonBackground(e);
+    private void loadHomeView(ActionEvent e) throws IOException {
+        Stage stage =new Stage();
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/HomeView.fxml"));
+        
+                    Parent root =loader.load();
+                    borderPane.setCenter(root);
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    HomeController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.u=au;
+                    mainpanelController.test();
+                   
+                    Scene scene = new Scene(root);
+
+                    stage.setScene(scene);
+                    stage.setTitle("Client Panel");
+                    stage.getIcons().add(new Image("/asset/icon.png"));
+                    stage.show();
     }
+
+    /*public void setUsername(String username) {
+        this.username = username;
+    }*/
+
+    /*void setUsername(Utilisateur a) {
+     au =new Utilisateur(a);
+        
+    }*/
+
 }

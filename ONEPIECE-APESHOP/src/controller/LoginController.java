@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package controller;
-
+import services.md5tool;
 import database.DbConnection;
 import entities.Utilisateur;
 import helper.AlertHelper;
 import java.io.IOException;
 import java.net.URL;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -65,23 +67,29 @@ public class LoginController implements Initializable {
 
     @FXML
     private void login() throws Exception {
-
+md5tool mt =new md5tool("qwrwrww More than 10","utf-8");
         if (this.isValidated()) {
            
 String nom=username.getText();
-String pass=password.getText();
+String pass=mt.encode(password.getText());
 boolean verif =false;
              
            for (Utilisateur u: MyList){
               
                 if (nom.equals(u.getNomClient()) && pass.equals(u.getMotDePasse()) && u.getRole().equals("client")) {
-                    
+                   
+                   
                     verif =true;
                     Stage stage = (Stage) loginButton.getScene().getWindow();
                     stage.close();
-
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
-
+                    
+                    FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/MainPanelView.fxml"));
+                    Parent root =loader.load();
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    MainPanelController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.au=u;
+                   
                     Scene scene = new Scene(root);
 
                     stage.setScene(scene);
@@ -95,9 +103,12 @@ boolean verif =false;
                     verif =true;
                     Stage stage = (Stage) loginButton.getScene().getWindow();
                     stage.close();
-
-                    Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelViewA.fxml"));
-
+                    FXMLLoader loader=new FXMLLoader(getClass().getResource("/view/MainPanelViewA.fxml"));
+                    Parent root =loader.load();
+                    //Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+                    MainPanelAController mainpanelController=loader.getController();
+                    //System.out.println(u);
+                    mainpanelController.au=u;
                     Scene scene = new Scene(root);
 
                     stage.setScene(scene);
@@ -171,5 +182,27 @@ boolean verif =false;
         stage.setTitle("Send password");
         stage.getIcons().add(new Image("/asset/icon.png"));
         stage.show();
+    }
+       public static String doHashing(String password) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+
+            messageDigest.update(password.getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder sb = new StringBuilder();
+
+            for (byte b : resultByteArray) {
+                sb.append(String.format("%02x", b));
+            }
+            System.out.println(sb.toString());
+            return sb.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
+        return "";
     }
 }
