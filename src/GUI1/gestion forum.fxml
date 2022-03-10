@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI1.GestionForumController">
+   <children>
+      <Label layoutX="60.0" layoutY="118.0" prefHeight="26.0" prefWidth="137.0" text="sujetForum">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="256.0" prefHeight="17.0" prefWidth="137.0" text="idCommentaire">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="413.0" />
+      <Button layoutX="137.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnajouterfclicked" prefHeight="37.0" prefWidth="93.0" text="ajouter " />
+      <TextField fx:id="sujetForum" layoutX="135.0" layoutY="113.0" prefHeight="37.0" prefWidth="330.0" />
+      <Button layoutX="260.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnsuppclicked" prefHeight="37.0" prefWidth="93.0" text="supprimer" />
+      <Button layoutX="378.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnmodifierclicked" prefHeight="37.0" prefWidth="93.0" text="modifier" />
+      <TextField fx:id="idCommentaire" layoutX="183.0" layoutY="248.0" prefHeight="37.0" prefWidth="288.0" />
+      <Button layoutX="353.0" layoutY="316.0" mnemonicParsing="false" onAction="#btnsuppcclicked" prefHeight="37.0" prefWidth="93.0" text="supprimer" />
+      <TableView fx:id="tableview" layoutX="492.0" layoutY="20.0" prefHeight="338.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="idCommentaire2" prefWidth="100.0" text="idCommentaire" />
+            <TableColumn fx:id="contenuCommentaire2" minWidth="0.0" prefWidth="662.0" text="contenuCommentaire" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnscene2" layoutX="14.0" layoutY="582.0" mnemonicParsing="false" onAction="#switchtoajout" prefHeight="37.0" prefWidth="121.0" text="switch" />
+      <TableView fx:id="tableview2" layoutX="492.0" layoutY="384.0" prefHeight="217.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="idForum2" prefWidth="67.0" text="idForum" />
+          <TableColumn fx:id="sujetForum2" prefWidth="693.5999755859375" text="sujetForum" />
+        </columns>
+      </TableView>
+      <Label layoutX="61.0" layoutY="56.0" text="idForum" />
+      
+   </children>
+</AnchorPane>

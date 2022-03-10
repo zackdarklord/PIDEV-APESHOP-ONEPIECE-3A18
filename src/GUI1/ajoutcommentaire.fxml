@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI1.AjoutcommentaireController">
+   <children>
+      <Label layoutX="64.0" layoutY="292.0" prefHeight="17.0" prefWidth="124.0" text="contenuCommentaire" />
+      <TextField fx:id="contenuCommentaire" layoutX="207.0" layoutY="288.0" prefHeight="25.0" prefWidth="198.0" />
+      <Button layoutX="306.0" layoutY="347.0" mnemonicParsing="false" onAction="#btnajouterclicked" prefHeight="39.0" prefWidth="106.0" text="ajouter" />
+      <Label layoutX="188.0" layoutY="14.0" prefHeight="39.0" prefWidth="97.0" text="Forum">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnscene1" layoutX="14.0" layoutY="431.0" mnemonicParsing="false" onAction="#switchtogestion" prefHeight="39.0" prefWidth="138.0" text="switch" />
+      <TableView fx:id="tableview4" layoutX="445.0" layoutY="26.0" prefHeight="444.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="contenuCommentaire2" prefWidth="533.0" text="contenuCommentaire" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableview3" layoutX="14.0" layoutY="74.0" prefHeight="99.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="sujetForum2" prefWidth="413.0" text="sujetForum" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
