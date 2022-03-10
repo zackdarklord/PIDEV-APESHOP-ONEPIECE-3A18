@@ -26,8 +26,8 @@ public class CategoriePCRUD {
 }
     public void ajouterCategorieP () {
         try {
-            String requete = "INSERT INTO categoriep(nomCategorie) "
-                    + "VALUES ('jeuvideo')";
+            String requete = "INSERT INTO categoriep(idCategorie) "
+                    + "VALUES ('20')";
             Statement st = cnx2.createStatement();
             st.executeUpdate(requete);
             System.out.println("Categorie ajouté avec succès");
@@ -37,7 +37,7 @@ public class CategoriePCRUD {
     }
     public void ajouterCategorie2 (CategorieP c){
         try {
-            String requete2 = "INSERT INTO categoriep(nomCategorie) "
+            String requete2 = "INSERT INTO categoriep(idCategorie) "
                     + "VALUES(?)";
             PreparedStatement pst = cnx2.prepareStatement(requete2);
             pst.setInt(1, c.getIdCategorie());
@@ -79,8 +79,8 @@ public class CategoriePCRUD {
     
     public void modifierCategorieP (CategorieP c , int idCategorie){
     try {
-            String req = "UPDATE commandes SET dateCreation=?,dateEnvoi=?,numeroUtilisateur=?,statut=? "
-                    + "WHERE numeroCommande=?";
+            String req = "UPDATE categoriep SET idCategorie=?,nomCategorie=? "
+                    + "WHERE idCategorie=?";
             PreparedStatement pst = cnx2.prepareStatement(req);
              pst.setString(1,c.getNomCategorie());
             

@@ -28,8 +28,8 @@ public class ProduitCRUD {
     }
     public void ajouterProduit () {
         try {
-            String requete = "INSERT INTO produits(nomProduit,quantite,prixUnitaire,nomCategorie) "
-                    + "VALUES ('nintendo','50','1500','jeuvideo')";
+            String requete = "INSERT INTO produits(nomProduit,quantite,prixUnitaire,idCategorie) "
+                    + "VALUES ('nintendo','50','1500','20')";
             Statement st = cnx2.createStatement();
             st.executeUpdate(requete);
             System.out.println("Produit ajouté avec succès");
@@ -39,13 +39,13 @@ public class ProduitCRUD {
     }
     public void ajouterProduit2 (Produit p){
         try {
-            String requete2 = "INSERT INTO produits(nomProduit,quantite,prixUnitaire,nomCategorie) "
+            String requete2 = "INSERT INTO produits(nomProduit,quantite,prixUnitaire,idCategorie) "
                     + "VALUES(?,?,?,?)";
             PreparedStatement pst = cnx2.prepareStatement(requete2);
             pst.setString(1, p.getNomProduit());
             pst.setInt(2, p.getQuantite());
             pst.setFloat(3, p.getPrixUnitaire());
-            pst.setString(4, p.getNomCategorie());
+            pst.setInt(4, p.getIdCategorie());
 
          
             pst.executeUpdate();
@@ -69,7 +69,7 @@ public class ProduitCRUD {
                   p.setNomProduit(rs.getString(2));
                   p.setQuantite(rs.getInt(3));
                   p.setPrixUnitaire(rs.getFloat(4));
-                  p.setNomCategorie(rs.getString(5));
+                  p.setIdCategorie(rs.getInt(5));
 
                   
                   myList.add(p);
@@ -84,13 +84,13 @@ public class ProduitCRUD {
     
     public void modifierProduit (Produit p , int numeroProduit){
     try {
-            String req = "UPDATE produits SET nomProduit=?,quantite=?,prixUnitaire=?,nomCategorie=? "
+            String req = "UPDATE produits SET nomProduit=?,quantite=?,prixUnitaire=?,idCategorie=? "
                     + "WHERE numeroProduit=?";
             PreparedStatement pst = cnx2.prepareStatement(req);
              pst.setString(1,p.getNomProduit());
             pst.setInt(2,p.getQuantite());
             pst.setFloat (3,p.getPrixUnitaire()); 
-            pst.setString(4,p.getNomCategorie()) ;
+            pst.setInt(4,p.getIdCategorie()) ;
              pst.setInt(4,p.getNumeroProduit()) ;
             pst.executeUpdate();
             System.out.println("produit modifie !");

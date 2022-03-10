@@ -13,24 +13,24 @@ public class Produit {
     private String nomProduit;
     private int quantite;
     private float prixUnitaire;
-    private String nomCategorie;
+    private int idCategorie;
 
     public Produit() {
     }
 
-    public Produit(int numeroProduit, String nomProduit, int quantite, float prixUnitaire, String nomCategorie) {
+    public Produit(int numeroProduit, String nomProduit, int quantite, float prixUnitaire, int idCategorie) {
         this.numeroProduit = numeroProduit;
         this.nomProduit = nomProduit;
         this.quantite = quantite;
         this.prixUnitaire = prixUnitaire;
-        this.nomCategorie = nomCategorie;
+        this.idCategorie = idCategorie;
     }
 
-    public Produit(String nomProduit, int quantite, float prixUnitaire, String nomCategorie) {
+    public Produit(String nomProduit, int quantite, float prixUnitaire, int idCategorie) {
         this.nomProduit = nomProduit;
         this.quantite = quantite;
         this.prixUnitaire = prixUnitaire;
-        this.nomCategorie = nomCategorie;
+        this.idCategorie = idCategorie;
     }
 
     public int getNumeroProduit() {
@@ -65,16 +65,18 @@ public class Produit {
         this.prixUnitaire = prixUnitaire;
     }
 
-    public String getNomCategorie() {
-        return nomCategorie;
+    public int getIdCategorie() {
+        return idCategorie;
     }
 
-    public void setNomCategorie(String nomCategorie) {
-        this.nomCategorie = nomCategorie;
+    public void setIdCategorie(int idCategorie) {
+        this.idCategorie = idCategorie;
     }
+
+    
 
     @Override
     public String toString() {
-        return "Produit{" + "numeroProduit=" + numeroProduit + ", nomProduit=" + nomProduit + ", quantite=" + quantite + ", prixUnitaire=" + prixUnitaire + ", nomCategorie=" + nomCategorie + '}';
+        return "Produit{" + "numeroProduit=" + numeroProduit + ", nomProduit=" + nomProduit + ", quantite=" + quantite + ", prixUnitaire=" + prixUnitaire + ", idCategorie=" + idCategorie + '}';
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="385.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="gui.GUImController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="235.0" prefWidth="147.0">
+         <children>
+            <Label prefHeight="51.0" prefWidth="90.0" text="numeroProduit" />
+            <Label prefHeight="37.0" prefWidth="75.0" text="nomProduit" />
+            <Label prefHeight="51.0" prefWidth="54.0" text="quantite" />
+            <Label prefHeight="39.0" prefWidth="82.0" text="prixUnitaire" />
+            <Label prefHeight="46.0" prefWidth="71.0" text="idCategorie" />
+         </children>
+      </VBox>
+      <VBox layoutX="161.0" layoutY="32.0" prefHeight="220.0" prefWidth="206.0" spacing="18.0">
+         <children>
+            <TextField fx:id="tfnump" />
+            <TextField fx:id="tfnomp" />
+            <TextField fx:id="tfq" />
+            <TextField fx:id="tfprixu" />
+            <TextField fx:id="tfidc" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvproduits" layoutX="389.0" layoutY="23.0" prefHeight="252.0" prefWidth="380.0">
+        <columns>
+          <TableColumn fx:id="colnump" prefWidth="93.60003662109375" text="numeroProduit" />
+          <TableColumn fx:id="colnomp" prefWidth="76.79998779296875" text="nomProduit" />
+            <TableColumn fx:id="colq" prefWidth="55.20001220703125" text="quantite" />
+            <TableColumn fx:id="colprixu" prefWidth="75.0" text="prixUnitaire" />
+            <TableColumn fx:id="colidc" prefWidth="75.0" text="idCategorie" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnajouter" layoutX="21.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="99.0" text="Ajouter" />
+      <Button fx:id="btnmod" layoutX="139.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="99.0" text="Modifier" />
+      <Button fx:id="btnsupp" layoutX="264.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="38.0" prefWidth="99.0" text="Supprimer" />
+   </children>
+</AnchorPane>
